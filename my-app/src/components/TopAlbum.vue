@@ -1,6 +1,6 @@
 <template>
   <div class="top-album">
-    <p>{{ msg }}</p>
+    <p>{{ title }}</p>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'TopAlbum',
   props: {
-    msg: String,
+    title: String,
   },
 };
 </script>
