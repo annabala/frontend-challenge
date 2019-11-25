@@ -25,9 +25,10 @@
 
 <script>
 // @ is an alias to /src
+import axios from 'axios';
 import TopAlbum from '@/components/TopAlbum.vue';
 
-const API = 'https://itunes.apple.com/us/rss/topalbums/limit=100/json';
+// const API = 'https://itunes.apple.com/us/rss/topalbums/limit=100/json';
 
 export default {
   name: 'home',
@@ -39,13 +40,14 @@ export default {
   components: {
     TopAlbum,
   },
-  methods: {
-    getItems() {
-      axios.get(`${API}`)
-        .then((response) => {
-          console.log(response);
-        });
-    },
+  mounted() {
+    axios.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json')
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
