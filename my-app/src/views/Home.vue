@@ -5,19 +5,7 @@
         <label for="search">Search</label>
         <input id="search" type="text" name="search">
       </div>
-      <TopAlbum/>
-      <div class="home__album-container d-flex flex-row flex-wrap justify-content-between">
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-        <div class="home__album-item"></div>
-      </div>
+      <TopAlbum :feedAlbum="feedAlbum"/>
     </div>
     <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </div>
@@ -34,20 +22,24 @@ export default {
   name: 'home',
   data() {
     return {
-      // search
+      feeds: [],
+      feedAlbum: [],
     };
   },
   components: {
     TopAlbum,
   },
-  mounted() {
-    axios.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json')
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  created() {
+    this.getFeeds();
+  },
+  methods: {
+    async getFeeds() {
+      const { data } = await axios.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json');
+      this.feeds = data;
+      const feedArray = data.feed.entry;
+      feedArray.map(feed => this.feedAlbum.push(feed));
+      // feed['im:image'][2].label
+    },
   },
 };
 </script>
@@ -59,7 +51,7 @@ $color-cta: #f2b632;
     max-width: 300px;
   }
   &__album-container {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 0 auto;
   }
   &__album-item {
