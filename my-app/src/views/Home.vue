@@ -44,22 +44,9 @@ export default {
 };
 </script>
 <style lang="scss">
-$color-primary: #16174f;
-$color-cta: #f2b632;
 .home {
   &__search {
     max-width: 300px;
-  }
-  &__album-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  &__album-item {
-    background-color: $color-cta;
-    width: 180px;
-    height: 180px;
-    box-shadow: 2px 2px 12px rgba(0,0,0,.2);
-    margin: 15px 20px;
   }
 }
 </style>
