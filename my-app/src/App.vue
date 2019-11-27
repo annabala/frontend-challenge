@@ -22,14 +22,9 @@ export default {
 </script>
 
 <style lang="scss">
-// Variables
-$color-black : #000;
-$color-white : #fff;
-$color-primary: #161B40;
-$color-primary-light: #68BBE5;
-$color-cta: #f2b632;
-
 @import url('https://fonts.googleapis.com/css?family=Cairo:400,700,900|Roboto:400,500,700&display=swap');
+@import "./styles/setup/variables.scss";
+
 #app {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
