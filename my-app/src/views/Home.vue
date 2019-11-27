@@ -43,10 +43,6 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.home {
-  &__search {
-    max-width: 300px;
-  }
-}
+<style lang="scss" scoped>
+@import "../styles/views/home.scss";
 </style>

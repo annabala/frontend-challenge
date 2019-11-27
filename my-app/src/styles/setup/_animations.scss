@@ -1,0 +1,12 @@
+@keyframes bouncingNote {
+  0% {
+    transform: translateY(0) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(3px) rotate(-25deg);
+
+  }
+  100% {
+    transform: translateY(0) rotate(-20deg);
+  }
+}
