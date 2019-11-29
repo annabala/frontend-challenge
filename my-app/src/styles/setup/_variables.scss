@@ -1,5 +1,16 @@
 $color-black : #000;
 $color-white : #fff;
-$color-cta: #f2b632;
-$color-primary: #161B40;
-$color-primary-light: #68BBE5;
+$color-cta: #ff8906;
+$color-vibrant: #61dafb;
+$color-primary: #303c6c;
+$color-light: #d2fdff;
+
+$font-body:  'Roboto', Helvetica, Arial, sans-serif;
+$font-special: 'Cairo';
+
+$breakpoints: (
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px
+) !default;
