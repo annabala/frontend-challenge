@@ -1,11 +1,11 @@
-@import "basics/base.scss";
-@import "basics/layout.scss";
-
-@import "setup/normalize.scss";
-@import "setup/animations.scss";
-@import "setup/typography.scss";
-@import "setup/variables.scss";
+// @import "setup/variables.scss";
 @import "setup/mixins.scss";
+@import "setup/normalize.scss";
+@import "setup/typography.scss";
+@import "setup/animations.scss";
+
+@import "basics/app.scss";
+@import "basics/layout.scss";
 
 @import "components/topalbum.scss";
 

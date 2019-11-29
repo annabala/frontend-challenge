@@ -1,5 +1,12 @@
 .home {
   &__search {
+    font: 18px/22px Cairo;
+    letter-spacing: 1px;
+    color: $color-white;
     max-width: 300px;
+    & input {
+      border: 3px solid $color-cta;
+      min-height: 3rem;
+    }
   }
 }

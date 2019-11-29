@@ -1,9 +1,17 @@
+#app {
+  font-family: $font-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: $color-black;
+  min-height: 100vh;
+}
 #nav {
-  padding: 30px;
-  background-color: rgba($color-black, .6);
-
+  padding: 50px 0;
+  background-color: $color-black;
   a {
-    font: 700 22px/26px Cairo;
+    font: 700 22px/26px $font-special;
     color: $color-white;
     margin: 0 15px;
     transition: border-bottom .2s ease;
@@ -27,8 +35,8 @@
       transform-origin: center;
     }
     &__text {
-      font: 900 26px/30px Cairo;
-      color: $color-cta;
+      font: 900 26px/30px $font-special;
+      color: $color-vibrant;
     }
   }
 }
