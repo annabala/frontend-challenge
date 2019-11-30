@@ -1,8 +1,8 @@
 <template>
   <div class="home" :class="{'home--shadow': showModal == true}">
     <div class="container">
-      <div class="home__search d-flex flex-column mx-auto mt-4mb-5">
-        <label for="search" class="m-0 text-left">Search by album title:</label>
+      <div class="home__search d-flex flex-column mx-auto mt-4 mb-5">
+        <label for="search" class="m-0  text-left">Search by album title:</label>
         <input
           id="search"
           type="text"
@@ -97,8 +97,7 @@ export default {
     },
   },
   computed: {
-    searchList(e) {
-      console.log(e);
+    searchList() {
       return this.feedAlbum.filter(feed => feed['im:name'].label.toLowerCase().match(this.searchValue.toLowerCase()));
     },
   },
@@ -108,6 +107,7 @@ export default {
 @import "../styles/setup/variables.scss";
 @import "../styles/setup/mixins.scss";
 @import "../styles/setup/animations.scss";
+@import "../styles/basics/utilities.scss";
 @import "../styles/views/home.scss";
 @import "../styles/components/topalbum.scss";
 @import "../styles/components/buttons.scss";
