@@ -35,3 +35,10 @@
       @content;
   }
 }
+
+@mixin position($position, $top, $left, $translate1, $translate2) {
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: translate($translate1, $translate2);
+}

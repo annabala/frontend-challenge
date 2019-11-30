@@ -1,11 +1,11 @@
 <template>
-  <div class="info-box p-2">
+  <div class="info-box d-flex d-md-block align-items-end p-2">
     <div
-      class="info-box__more-info h-100
+      class="info-box__more-info h-100 w-100
       d-flex flex-column align-items-start justify-content-around text-left p-2">
       <button class="rounded-0 btn w-100 text-right btn-sm btn-link btn-close fixed-top"
       @click="$emit('close')">Close</button>
-      <div class="info-box__more-info-img w-100 text-center">
+      <div class="info-box__more-info-img w-100 text-center pb-3">
         <img :src="albumInfo.cover" alt="cover">
       </div>
       <p><span class="info-box__more-info-label">Title: </span>{{ albumInfo.title }}</p>
@@ -35,27 +35,8 @@ export default {
 <style scoped lang="scss">
 
 @import "../styles/setup/variables.scss";
+@import "../styles/setup/mixins.scss";
 @import "../styles/components/buttons.scss";
+@import "../styles/components/infobox.scss";
 
-.info-box {
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  color: $color-black;
-  font: 700 1rem/1.2rem $font-special;
-  width: 500px;
-  height: 500px;
-  background-color: $color-white;
-  border: 15px solid $color-vibrant;
-  z-index: 20;
-  & img {
-    box-shadow: 2px 0px 10px rgba(0,0,0, 0.3);
-  }
-  &__more-info-label {
-    font: 500 1rem/1rem $font-body;
-    color: $color-primary;
-    margin: 0 5px 0 0;
-  }
-}
 </style>

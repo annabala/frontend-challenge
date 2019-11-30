@@ -1,11 +1,12 @@
 #nav {
-  padding: 30px;
-  background-color: rgba($color-black, .6);
-
+  padding: 2.5rem 0 1.5rem 0;
+  background-color: $color-black;
+  border-bottom: 2px solid $color-vibrant;
+  box-shadow: 2px 2px 8px rgba(253,244,213, 0.2);
   a {
-    font: 700 22px/26px Cairo;
+    font: 700 22px/26px $font-special;
     color: $color-white;
-    margin: 0 15px;
+    margin: 0 1rem;
     transition: border-bottom .2s ease;
     &:hover {
       border-bottom: 2px solid $color-cta;
@@ -21,14 +22,12 @@
       width: 35px;
       transform: rotate(-20deg);
       animation: bouncingNote 3s ease 1s infinite;
-      position: absolute;
-      left: -18px;
-      top: -19px;
+      @include position(absolute, -7px, -20px, 0,0);
       transform-origin: center;
     }
     &__text {
-      font: 900 26px/30px Cairo;
-      color: $color-cta;
+      font: 900 26px/30px $font-special;
+      color: $color-vibrant;
     }
   }
 }

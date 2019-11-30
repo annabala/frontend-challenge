@@ -7,39 +7,3 @@
   background-color: $color-black;
   min-height: 100vh;
 }
-#nav {
-  padding: 2.5rem 0 1.5rem 0;
-  background-color: $color-black;
-  border-bottom: 2px solid $color-vibrant;
-  box-shadow: 2px 2px 8px rgba(253,244,213, 0.3);
-
-  a {
-    font: 700 22px/26px $font-special;
-    color: $color-white;
-    margin: 0 15px;
-    transition: border-bottom .2s ease;
-    &:hover {
-      border-bottom: 2px solid $color-cta;
-      text-decoration: none;
-    }
-    &.router-link-exact-active {
-      border-bottom: 3px solid $color-cta;
-    }
-  }
-  .app-logo {
-    position: relative;
-    &__img {
-      width: 35px;
-      transform: rotate(-20deg);
-      animation: bouncingNote 3s ease 1s infinite;
-      position: absolute;
-      left: -18px;
-      top: -19px;
-      transform-origin: center;
-    }
-    &__text {
-      font: 900 26px/30px $font-special;
-      color: $color-vibrant;
-    }
-  }
-}
