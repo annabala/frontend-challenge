@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <nav id="nav" class="d-flex flex-column justify-content-center align-items-center">
+    <nav id="nav" class="fixed-top d-flex flex-column justify-content-center align-items-center">
       <div class="app-logo text-left d-flex flex-column-reverse">
         <h1 class="app-logo__text">topTunes</h1>
         <img class="app-logo__img img-fluid" src="./assets/headphones.svg" alt="top tunes logo">
       </div>
       <div class="nav-links d-flex py-3">
       <router-link to="/">Home</router-link>
-      <router-link to="/about">Favorites</router-link>
+      <router-link to="/favorite">Favorites</router-link>
       </div>
     </nav>
     <router-view/>

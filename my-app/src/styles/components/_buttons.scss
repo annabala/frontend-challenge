@@ -1,0 +1,30 @@
+.btn-more {
+  font: 700 .9rem/1rem $font-body;
+  color: $color-white;
+  transition: all .3s ease;
+  &:hover {
+    color: $color-cta;
+    text-decoration: none;
+  }
+  &:hover img {
+    margin: 0 0 0 5px;
+  }
+  & img {
+    width: 1.2rem;
+    transition: margin .3s ease;
+  }
+}
+
+.btn-close {
+  font: 700 .9rem/1rem $font-body;
+  text-transform: uppercase;
+  color: $color-cancel;
+  &::after {
+    content: '\2716';
+    font: 700 .9rem/1rem $font-body;
+    margin: 0 5px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -4,9 +4,8 @@
     margin: 0 auto;
   }
   &__album-item {
-    cursor: pointer;
     width: 100%;
-    min-height: 330px;
+    min-height: 400px;
     animation: fadeIn 2s ease;
     @include media-up(medium) {
       width: 50%;
@@ -49,14 +48,24 @@
     &-name {
       font: 700 1rem/1.2rem $font-body;
       width: 100%;
+      max-width: 224px;
+      // min-height: 60px;
       color: $color-vibrant;
-      padding: 10px 5px;
+      padding: 0 5px;
+      margin: 0 auto 5px auto;
       transition: all .4s ease;
-      &--author {
-        font: 700 .8rem/1rem $font-body;
+      &--sm {
+        font: 700 .9rem/1rem $font-body;
         width: 100%;
         color: $color-light;
       }
+    }
+    &:hover .top-album__album-item-img{
+      background-color: $color-vibrant;
+      border: 15px solid $color-cta;
+    }
+    &:hover .top-album__album-item-img::after {
+      right: 18%;
     }
   }
 }
